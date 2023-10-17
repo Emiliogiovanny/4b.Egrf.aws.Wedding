@@ -1,4 +1,4 @@
-<section class="breadcumd__banner">
+<section class="breadcumd__banner"
     <div class="container">
         <div class="breadcumd__wrapper center">
             <h1 class="left__content">
