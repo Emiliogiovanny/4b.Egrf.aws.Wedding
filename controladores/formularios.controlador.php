@@ -8,7 +8,7 @@ class ControladorFormularios
     {
         if (isset($_POST["registerName"])) {
             /*return $_POST["registerName"] . "<br>" . $_POST["registerEmail"] . "<br>" .$_POST["registerPassword"] . "<br>";*/
-            $tabla = "registros_mac_wedding";
+            $tabla = "registros_egrf_wedding";
 
             $datos = array(
                 "nombre" => $_POST["registerName"],
@@ -25,13 +25,13 @@ class ControladorFormularios
     static public function ctrSeleccionarRegistros($item, $valor)
     {
         if ($item == null && $valor == null) {
-            $tabla = "registros_mac_wedding";
+            $tabla = "registros_egrf_wedding";
 
             $respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, null, null);
 
             return $respuesta;
         } else {
-            $tabla = "registros_mac_wedding";
+            $tabla = "registros_egrf_wedding";
 
             $respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
@@ -45,7 +45,7 @@ class ControladorFormularios
     public function ctrIngreso()
     {
         if (isset($_POST["ingresoEmail"])) {
-            $tabla = "registros_mac_wedding";
+            $tabla = "registros_egrf_wedding";
             $item = "email";
             $valor = $_POST["ingresoEmail"];
 
@@ -56,7 +56,7 @@ class ControladorFormularios
 
                     $_SESSION["validarIngreso"] = "ok";
 
-                    echo "Ingreso Exitoso";
+                    echo "Ingreso muy Exitoso";
 
                     echo '<script>
                         if (window.history.replaceState){
@@ -80,7 +80,7 @@ class ControladorFormularios
                         window.history.replaceState(null, null, window.location.href);
                     }
                 </script>';
-                echo '<div class="alert alert-danger">Error en el sistema ';
+                echo '<div class="alert alert-danger">Error al ejecutar ';
             }
         }
 
@@ -96,7 +96,7 @@ class ControladorFormularios
             } else {
                 $password = $_POST["passwordActual"];
             }
-            $tabla = "registros_mac_wedding";
+            $tabla = "registros_egrf_wedding";
 
             $datos = array(
                 "id" => $_POST["id"],
@@ -129,11 +129,11 @@ class ControladorFormularios
                     window.history.replaceState(null, null, window.location.href);
                 }
                 </script>    ';
-                echo '<div class="alert-success"> El usuario ha sido Eliminado</div>
+                echo '<div class="alert-success"> El usuario a sido Eliminado</div>
                     <script>
                     setTimeout(function(){
                     window.location = "index.php?pagina=inicio";
-                    },3000);
+                    },3306);
                     </script>
                     ';
             }

@@ -153,7 +153,7 @@ $(".wedding__party__warpper").owlCarousel({
   loop: true,
   margin: 15,
   smartSpeed: 800,
-  autoplayTimeout: 2200,
+  autoplayTimeout: 2400,
   autoplay: true,
   responsiveClass: true,
   nav:true,

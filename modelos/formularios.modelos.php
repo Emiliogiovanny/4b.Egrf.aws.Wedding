@@ -19,7 +19,7 @@ class ModeloFormularios
         } else {
             print_r($stmt->errorInfo());
         }
-        //$stmt->close();
+        
         $stmt = null;
 
     }
@@ -48,7 +48,7 @@ class ModeloFormularios
         }
 
 
-        $stmt = null;
+       
     }
     /**
      * actualizar registros 
